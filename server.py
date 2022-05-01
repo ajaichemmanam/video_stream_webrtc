@@ -109,7 +109,7 @@ async def offer(request):
         logger.info(pc_id + " " + msg, *args)
 
     log_info("Created for %s", request.remote)
-    player = MediaPlayer(os.path.join(ROOT, "s2.ts"))
+    player = MediaPlayer(os.path.join(ROOT, "sample.ts"))
 
     pc.addTrack(VideoTransformTrack(player.video, transform=params["video_transform"]))
 
